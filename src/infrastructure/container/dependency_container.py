@@ -94,8 +94,7 @@ class DependencyContainer:
     def _create_certificate_repository(self) -> CertificateRepositoryImpl:
         """Cria uma instância do CertificateRepositoryImpl."""
         dynamodb_service = self.get('dynamodb_service')
-        # Passa apenas o nome da entidade, não o nome completo da tabela
-        return CertificateRepositoryImpl(dynamodb_service, 'certificates')
+        return CertificateRepositoryImpl(dynamodb_service)
 
     def _create_process_certificate_notification(self):
         """Cria uma instância do ProcessCertificateNotification."""
