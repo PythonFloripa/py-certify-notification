@@ -33,11 +33,11 @@ A função Lambda é acionada por um evento SQS que contém um lote de notifica�
 {
   "notifications": [
     {
-      "order_id": 452,
-      "product_id": 316,
-      "product_name": "Evento de Teste",
-      "email": "evento_teste@gmail.com",
-      "certificate_key": "certificates/316/452/TestEvento_de_Teste_AD9-B58-BFA.png",
+      "order_id": 123456,
+      "product_id": 42,
+      "product_name": "Demo Event",
+      "email": "alex@example.test",
+      "certificate_key": "certificates/42/123456/Alex_Example_Demo_Event_ABC-123-XYZ.png",
       "success": true
     }
   ]
@@ -52,14 +52,14 @@ Após o processamento, o serviço envia uma notificação para um endpoint exter
 
 ```json
 {
-  "product_id": 316,
+  "product_id": 42,
   "certificates_quantity": 1,
   "certificates": [
     {
       "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
-      "order_id": 452,
-      "product_id": 316,
-      "product_name": "Evento de Teste",
+      "order_id": 123456,
+      "product_id": 42,
+      "product_name": "Demo Event",
       "certificate_url": "https://example.com/certificate.png",
       "success": true
     }
