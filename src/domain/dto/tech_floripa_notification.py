@@ -11,7 +11,7 @@ class CertificateNotificationItem(BaseModel):
     id: str = Field(..., description="ID do certificado (convertido de UUID para string)")
     order_id: int = Field(..., description="ID do pedido")
     validation_code: str = Field(..., description="Código de validação do certificado")
-    authenticity_verification_url: str = Field(..., description="URL para verificação de autenticidade do certificado")
+    authenticity_verification_url: str | None = Field(None, description="URL para verificação de autenticidade do certificado")
     product_id: int = Field(..., description="ID do produto")
     product_name: str = Field(..., description="Nome do produto")
     certificate_url: str | None = Field(None, description="URL do certificado")

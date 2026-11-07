@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Optional
 
 class CertificateNotificationResponse(BaseModel):
     """
@@ -8,7 +8,7 @@ class CertificateNotificationResponse(BaseModel):
     """
     order_id: int = Field(..., description="ID da ordem processada")    
     validation_code: str = Field(..., description="Código de validação do certificado")
-    authenticity_verification_url: str = Field(..., description="URL para verificação de autenticidade do certificado")
+    authenticity_verification_url: Optional[str] = Field(None, description="URL para verificação de autenticidade do certificado")
     product_id: int = Field(..., description="ID do produto")
     product_name: str = Field(..., description="Nome do produto")
     email: str = Field(..., description="Email do participante")
